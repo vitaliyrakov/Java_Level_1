@@ -16,5 +16,11 @@ public class Main {
         char charVar = 'q';
         String stringVar = "hello";
 
+        System.out.println("3. результат работы метода calcMeth: " + calcMeth(byteVar, shortVar, intVar, longVar));
+    }
+
+    // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода
+    public static double calcMeth(double a, double b, double c, double d) {
+        return a * (b + (c / d));
     }
 }
