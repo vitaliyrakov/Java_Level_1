@@ -22,6 +22,9 @@ public class Main {
         System.out.println(" результат работы метода isSumBetween10_20(" + byteVar + "," + shortVar + "): " + isSumBetween10_20(byteVar, shortVar));
         System.out.println(" результат работы метода isSumBetween10_20(" + 5 + "," + 12 + "): " + isSumBetween10_20(5, 12));
 
+        System.out.println("5.");
+        printSignNomber(-10);
+        printSignNomber(100);
     }
 
     // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода
@@ -36,5 +39,14 @@ public class Main {
         if (a + b >= 10 && a + b <= 20) cond = true;
         else cond = false;
         return cond;
+    }
+
+    /*5. Написать метод, которому в качестве параметра передается целое число,
+     метод должен напечатать в консоль положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.  */
+    public static void printSignNomber(long number) {
+        String sign;
+        if (number >= 0) sign = " положительное";
+        else sign = " отрицательное";
+        System.out.println(" Число " + number + sign);
     }
 }
