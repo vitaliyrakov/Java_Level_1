@@ -24,3 +24,7 @@ hs_err_pid*
 
 # JetBrains IDE
 .idea/
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3ce114 (created empty project and added method main)
