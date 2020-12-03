@@ -25,6 +25,11 @@ public class Main {
         System.out.println("5.");
         printSignNomber(-10);
         printSignNomber(100);
+
+        System.out.println("6.");
+        System.out.println(" результат работы метода isNegativNumber(" + longVar + "): " + isNegativNumber(longVar));
+        System.out.println(" результат работы метода isNegativNumber(" + intVar + "): " + isNegativNumber(intVar));
+
     }
 
     // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода
@@ -48,5 +53,10 @@ public class Main {
         if (number >= 0) sign = " положительное";
         else sign = " отрицательное";
         System.out.println(" Число " + number + sign);
+    }
+
+    // 6. Написать метод, которому в качестве параметра передается целое число, метод должен вернуть true, если число отрицательное
+    public static boolean isNegativNumber(long number) {
+        return number < 0;
     }
 }
