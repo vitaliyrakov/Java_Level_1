@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class Main {
     // 1. Создать пустой проект в IntelliJ IDEA и прописать метод main();
     public static void main(String[] args) {
@@ -33,6 +35,11 @@ public class Main {
         System.out.print("7. ");
         printHello("Вася");
 
+        System.out.println("8.");
+        int curYear = Year.now().getValue();
+        printIsLeapYear(curYear);
+        printIsLeapYear(1600);
+        printIsLeapYear(1700);
     }
 
     // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода
@@ -67,5 +74,15 @@ public class Main {
     public static void printHello(String name) {
         System.out.println("Привет, " + name);
     }
-    
+
+    /* 8. * Написать метод, который определяет является ли год високосным, и выводит сообщение в консоль.
+    Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный. */
+    public static void printIsLeapYear(int year) {
+        String isLeapYear;
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            isLeapYear = " високосный";
+        } else isLeapYear = " не високосный";
+        System.out.println(" Год " + year + isLeapYear);
+    }
+
 }
