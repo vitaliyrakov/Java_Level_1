@@ -30,6 +30,9 @@ public class Main {
         System.out.println(" результат работы метода isNegativNumber(" + longVar + "): " + isNegativNumber(longVar));
         System.out.println(" результат работы метода isNegativNumber(" + intVar + "): " + isNegativNumber(intVar));
 
+        System.out.print("7. ");
+        printHello("Вася");
+
     }
 
     // 3. Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,где a, b, c, d – входные параметры этого метода
@@ -59,4 +62,10 @@ public class Main {
     public static boolean isNegativNumber(long number) {
         return number < 0;
     }
+
+    // 7. Написать метод, которому в качестве параметра передается строка, обозначающая имя, метод должен вывести в консоль сообщение «Привет, указанное_имя!»
+    public static void printHello(String name) {
+        System.out.println("Привет, " + name);
+    }
+    
 }
