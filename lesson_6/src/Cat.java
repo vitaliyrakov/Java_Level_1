@@ -4,9 +4,9 @@ public class Cat extends Animal {
     private double jampLimit = 2.0;
 
     public Cat() {
-        this.runLimit = runLimit * dispersLimit/100;
-        this.swimLimit = swimLimit * dispersLimit/100;
-        this.jampLimit = jampLimit * dispersLimit/100;
+        this.runLimit = runLimit * dispersLimitK;
+        this.swimLimit = swimLimit * dispersLimitK;
+        this.jampLimit = jampLimit * dispersLimitK;
     }
 
     @Override
