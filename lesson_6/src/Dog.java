@@ -5,15 +5,10 @@ public class Dog extends Animal {
     private double swimLimit = 10;
     private double jampLimit = 0.5;
 
-    Random rand = new Random();
-
     public Dog() {
-        int dispersLimitD = rand.nextInt(dispersLimit*2);
-        System.out.println(dispersLimitD);
-        System.out.println((1-dispersLimit/100 + dispersLimitD/100));
-        this.runLimit = runLimit*(1-dispersLimit/100 + dispersLimitD/100);
-        this.swimLimit = swimLimit*(1-dispersLimit/100 + dispersLimitD/100);
-        this.jampLimit = jampLimit*(1-dispersLimit/100 + dispersLimitD/100);
+        this.runLimit = runLimit * dispersLimitK;
+        this.swimLimit = swimLimit * dispersLimitK;
+        this.jampLimit = jampLimit * dispersLimitK;
     }
 
     @Override
