@@ -13,7 +13,7 @@ public class Plate {
             food -= n;
             return true;
         } else {
-            System.out.println("Не достаточное еды в тарелке, котик, извини.");
+            System.out.println("Не достаточно еды в тарелке, котик, извини.");
             return false;
         }
     }
@@ -22,14 +22,12 @@ public class Plate {
         System.out.println("plate: " + food);
     }
 
-    public boolean addFood(int n) {
+    public void addFood(int n) {
         if (food + n <= plateLimit) {
             food += n;
-            return true;
         } else {
             food = plateLimit;
             System.out.println("Тарелка полная.");
-            return false;
         }
     }
 }
