@@ -6,8 +6,12 @@ public class Main {
     private static Random rand = new Random();
 
     public static void main(String[] args) {
+
         guessNumber();
+
         guessWord();
+
+        formatSentences();
     }
 
     private static void guessNumber() {
@@ -73,6 +77,25 @@ public class Main {
             System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
         } while (sc.nextInt() == 1);
         sc.close();
+    }
+
+    private static void formatSentences() {
+        //3. Доделать задачу с лекции.
+        String s = "Предложение     один  Теперь     предложение    два   Тут  предложение          три";
+
+        System.out.println(s);
+        String s1 = s.replaceAll(" +", " ");
+        System.out.println(s1);
+
+        StringBuilder s2 = new StringBuilder(s1);
+
+        for (int i = 1; i < s1.length(); i++) {
+            if (s1.charAt(i) >= 'А' && s1.charAt(i) <= 'Я') {
+                s2.setCharAt(i - 1, '.');
+            }
+        }
+
+        System.out.println(s2.toString().replace(".", ". ").concat("."));
     }
 
 }
